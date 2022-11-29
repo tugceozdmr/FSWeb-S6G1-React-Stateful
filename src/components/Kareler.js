@@ -14,7 +14,8 @@ Herhangi bir noktada yalnızca bir kare aktif olabilir (ya da hiçbiri)
 Aşaıdaki yorumları takip edin.
 */
 
-import React from 'react';
+import React,{useState} from 'react';
+
 
 
 //Bu değişkeni YALNIZCA bir durum dilimini yüklemek için kullanın!
@@ -23,23 +24,26 @@ const KareIdListesi = ['sqA', 'sqB', 'sqC', 'sqD'];
 
 
 export default function Kareler() {
+  const [kareler,setKareler] = useState(KareIdListesi)
+  const [aktifKare,setaktifKare] = useState(null)
   // State hookunu 2 defa kullanın: 'kareler' ve
   // 'aktifKare' olmak üzere. Birisi kare idlerini _dizi_ olarak tutacak, diğeri ise aktif olan
   // kareyi gözlemleyecek. Sayfa yüklendiğinde aktif kare olmayacak,
   // yani  'aktifKare' null olmalı.
 	
-  const ClassAdiAl = id => {
+  const ClassAdiAl = (id) => {
     // Bu bir click handler değildir, JSX içinde kullanılan bir yardımcıdır(helper).(aşağıya bakın)
     // Eğer argüman olarak verilen id aktif kare state'indeki id ile eşleşirse, class adı 'active' olan bir string döndürecek
     // diğer durumlar için boş döndürecek.
     // Etkisini görmek için kareye sağ tıklayın ve "öğeyi inceleyin".
-	return ''
+	return id==aktifKare? "active": " " 
   };
 
-  const AktifEt = id => {
+  const AktifEt = (id) => {
     // Bu bir _satır içinden çağırılmış_ click handler yardımcısıdır.
     // id bağımsız değişkenini, stateteki aktif id olacak şekilde ayarlayın
     // eğer zaten aktifse, o zaman önce state i resetlemeliyiz.
+    setaktifKare(id);
   };
 
   return (
