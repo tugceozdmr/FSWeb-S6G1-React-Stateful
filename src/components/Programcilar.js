@@ -8,7 +8,11 @@ Aynı zaman içinde yalnız bir harika programcıyı öne çıkarabiliriz.
 Yorumları takip edin.
 */
 
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import React, {useState} from 'react';
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
 /* ADIM 0  */
 
 // Bu değişkeni YALNIZCA bir state dilimini başlatmak için kullanın!
@@ -24,12 +28,16 @@ export const enIyilerListesi = [
 ];
 
 export default function Programcilar() {
+  const [enIyiler,setenIyiler] = useState(enIyilerListesi);
+  const[programciId,setProgramciId]=useState(null);
+  const [oneCikaninIsmi,setoneCikaninIsmi] = useState("");
   // İki state dilimine ihtiyacımız olduğundan, state hooku iki kez kullanmamız gerekecek..
 
   const [programcilar, setProgramcilar] = useState(enIyilerListesi);
   const [programciId, setProgramciId] = useState(null);
   // Bir yanda programcılar listesi, diğer yanda öne çıkan programcının idsi.
 
+<<<<<<< HEAD
   const oneCikaninIsmi = () => {
     // Bunu sona bırakın!
     // Bu bir event handler değil, yardımcıdır. Kullanımını JSX'te gözlemleyin.
@@ -46,6 +54,16 @@ export default function Programcilar() {
     });
     return res;
   };
+=======
+	
+  // const oneCikaninIsmi = () => {
+  //   // Bunu sona bırakın!
+  //   // Bu bir event handler değil, yardımcıdır. Kullanımını JSX'te gözlemleyin.
+  //   // Öne çıkan geliştiricinin _isim_ adını döndürmek için her iki state dilimini kullanacak.
+  //   // Closureların güzelliği, argümanlar yoluyla bilgi enjekte etmeye gerek kalmadan programın 
+	// // bu bölgesinden her iki state dilimini de "görebilmemiz"dir.
+  // };
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
 
   const stil = {
     fontSize: "1.5em",
@@ -62,6 +80,7 @@ export default function Programcilar() {
           // Şöyle diyebiliriz: "aa bu çalışıyor!" Ama programcilar bir state diliminden gelmiyorsa,
           // asla yeni programci ekleyemeyiz, programcilari düzenleyemeyiz ya da silemeyiz. Düzeltin!
           " */
+<<<<<<< HEAD
           enIyilerListesi.map((dev) => (
             <div className="programmer" key={dev.id}>
               {dev.isim}{" "}
@@ -73,6 +92,20 @@ export default function Programcilar() {
               >
                 Kutla
               </button>
+=======
+          enIyiler.map((dev) => ( 
+            <div className='programmer' key={dev.id}>
+              {dev.isim} 
+              <button
+               onClick={() => {
+                /* burada dev.id 'yi öne çıkan id'ye atayın */ 
+                setProgramciId(dev.id)
+                setoneCikaninIsmi(dev.isim);
+                }}
+                >
+                  Kutla
+                </button>
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
             </div>
           ))
         }
@@ -83,7 +116,11 @@ export default function Programcilar() {
           // Üçlüler, bir şeyin "gerçekliğine" bağlı olarak "bir şeyi veya diğerini" ifade etmek için harikadır..
           // Sözde-kod: öne çıkan true ise metin 1'i oluşturun, aksi takdirde metin 2'yi oluşturun..
           // Sabit kodlanmış false'u doğru değişkenle değiştirin.
+<<<<<<< HEAD
           programciId !== null
+=======
+          programciId != null
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
             ? `🎉 Hadi ${oneCikaninIsmi()}'ı kutlayalım! 🥳`
             : "Harika bir programcı seçin"
         }

@@ -25783,12 +25783,17 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 /* ADIM 0 buraya*/
 
 function Sayac() {
+<<<<<<< HEAD
   /* ADIM 1 buraya*/
 
+=======
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   var _useState = (0, _react.useState)(0),
     _useState2 = _slicedToArray(_useState, 2),
     sayici = _useState2[0],
     setSayici = _useState2[1];
+  /* ADIM 1 buraya*/
+
   var artirici = function artirici() {
     /* ADIM 4 buraya */
     setSayici(sayici + 1);
@@ -25811,7 +25816,11 @@ function Sayac() {
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Saya\xE7"), /*#__PURE__*/_react.default.createElement("div", {
     id: "sayici",
     style: stil
+<<<<<<< HEAD
   }, "Say\u0131 ", sayici, " ", sayici % 2 == 0 ? " çift" : " tek"), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+=======
+  }, "Say\u0131 ", sayici, sayici % 2 == 0 ? "cifttir" : "tektir", ";"), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
     id: "artirici",
     onClick: artirici
   }, "Art\u0131r\u0131c\u0131"), /*#__PURE__*/_react.default.createElement("button", {
@@ -25841,11 +25850,19 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 /* ADIM 0 */
 
 function Input() {
+<<<<<<< HEAD
   /* ADIM 1 */
   var _useState = (0, _react.useState)(""),
     _useState2 = _slicedToArray(_useState, 2),
     inputDegeri = _useState2[0],
     setinputDegeri = _useState2[1];
+=======
+  var _useState = (0, _react.useState)(" "),
+    _useState2 = _slicedToArray(_useState, 2),
+    inputDegeri = _useState2[0],
+    setinputDegeri = _useState2[1]; /* ADIM 1 */
+
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   var inputuDeğiştir = function inputuDeğiştir(evt) {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
@@ -25855,13 +25872,24 @@ function Input() {
   };
 
   var reset = function reset() {
+<<<<<<< HEAD
     /* ADIM 5 */
     setinputDegeri("");
+=======
+    setinputDegeri(""); /* ADIM 5 */
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   };
+
   var stil = {
+<<<<<<< HEAD
     fontSize: "1.5em",
     marginBottom: "0.3em",
     color: inputDegeri.length >= 10 ? "crimson" : "royalblue" /* ADIM 2 */
+=======
+    fontSize: '1.5em',
+    marginBottom: '0.3em',
+    color: inputDegeri.length > 10 ? 'crimson' : "" /* ADIM 2 */
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   };
 
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -25869,11 +25897,18 @@ function Input() {
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Input"), /*#__PURE__*/_react.default.createElement("div", {
     id: "output",
     style: stil
+<<<<<<< HEAD
   }, inputDegeri.toUpperCase()), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
     id: "input",
     type: "text",
     onChange: inputuDeğiştir,
     value: inputDegeri
+=======
+  }, "", inputDegeri.toUpperCase() /* ADIM 3 */, /*#__PURE__*/_react.default.createElement("div", null), /*#__PURE__*/_react.default.createElement("input", {
+    id: "input",
+    type: "text",
+    onChange: inputuDeğiştir
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   }), " ", /*#__PURE__*/_react.default.createElement("button", {
     id: "resetInput",
     onClick: reset
@@ -25901,27 +25936,37 @@ var ilkRuhHali = 'Nasıl hissettiğimi bilmiyorum :-|';
 var mutluRuhHali = 'Oldukça mutlu :)';
 var uzgunRuhHali = 'Oldukça üzgün :(';
 function RuhHalleri() {
+<<<<<<< HEAD
   /* ADIM 1 */
   var _useState = (0, _react.useState)(ilkRuhHali, mutluRuhHali, uzgunRuhHali),
+=======
+  var _useState = (0, _react.useState)(ilkRuhHali),
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
     _useState2 = _slicedToArray(_useState, 2),
     ruhHali = _useState2[0],
     setRuhHali = _useState2[1];
+  /* ADIM 1 */
+
   var mutluEt = function mutluEt() {
-    /* ADIM 4 */
-    setRuhHali(mutluRuhHali);
+    setRuhHali(mutluRuhHali); /* ADIM 4 */
   };
+
   var uZ = function uZ() {
-    /* ADIM 5 */
-    setRuhHali(uzgunRuhHali);
+    setRuhHali(uzgunRuhHali); /* ADIM 5 */
   };
+
   var reset = function reset() {
-    /* ADIM 6 */
-    setRuhHali(ilkRuhHali);
+    setRuhHali(ilkRuhHali); /* ADIM 6 */
   };
+
   var stil = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
+<<<<<<< HEAD
     color: mutluRuhHali ? 'royalblue' : crimson /* ADIM 2 */
+=======
+    color: ruhHali == mutluRuhHali ? "royalblue" : "crimson" /* ADIM 2 */
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   };
 
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -25929,7 +25974,11 @@ function RuhHalleri() {
   }, /*#__PURE__*/_react.default.createElement("h2", null, "RuhHalleri"), /*#__PURE__*/_react.default.createElement("div", {
     id: "ruhHali",
     style: stil
+<<<<<<< HEAD
   }, "'Nas\u0131l hissetti\u011Fimi bilmiyorum :-|'"), " ", ruhHali, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+=======
+  }, "'Nas\u0131l hissetti\u011Fimi bilmiyorum :-|'"), " ", ruhHali /* ADIM 3 */, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
     id: "mutluEt",
     onClick: mutluEt
   }, "Mutlu Et"), /*#__PURE__*/_react.default.createElement("button", {
@@ -25959,11 +26008,23 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 /* STEP 0 */
 
 function Dondurucu() {
+<<<<<<< HEAD
   /* ADIM 1 */
   var _useState = (0, _react.useState)(true),
     _useState2 = _slicedToArray(_useState, 2),
     döndürücüAcik = _useState2[0],
     setDöndürücüAcik = _useState2[1];
+=======
+  var _useState = (0, _react.useState)(true),
+    _useState2 = _slicedToArray(_useState, 2),
+    döndürücüAçık = _useState2[0],
+    setdöndürücüAcik = _useState2[1]; /* ADIM 1 */
+
+  var toggleDondurucu = function toggleDondurucu() {
+    setdöndürücüAcik(!döndürücüAçık); /* ADIM 4 */
+  };
+
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-spinner container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "D\xF6nd\xFCr\xFCc\xFC"), döndürücüAcik && /*#__PURE__*/_react.default.createElement("div", {
@@ -25971,10 +26032,15 @@ function Dondurucu() {
     className: "spinner"
   }, "--+--"), /*#__PURE__*/_react.default.createElement("button", {
     id: "toggleDondurucu",
+<<<<<<< HEAD
     onClick: function onClick() {
       return setDöndürücüAcik(!döndürücüAcik);
     }
   }, döndürücüAcik ? "Gizle" : "Göster"));
+=======
+    onClick: toggleDondurucu
+  }, döndürücüAçık == true ? "Gİzle" : "Göster" /* STEP 3 */));
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
 }
 },{"react":"../node_modules/react/index.js"}],"components/Kareler.js":[function(require,module,exports) {
 "use strict";
@@ -25995,6 +26061,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 //Bu değişkeni YALNIZCA bir durum dilimini yüklemek için kullanın!
 var KareIdListesi = ["sqA", "sqB", "sqC", "sqD"];
 function Kareler() {
+<<<<<<< HEAD
   // State hookunu 2 defa kullanın: 'kareler' ve
   // 'aktifKare' olmak üzere. Birisi kare idlerini _dizi_ olarak tutacak, diğeri ise aktif olan
   // kareyi gözlemleyecek. Sayfa yüklendiğinde aktif kare olmayacak,
@@ -26004,19 +26071,42 @@ function Kareler() {
     _useState2 = _slicedToArray(_useState, 2),
     aktifKare = _useState2[0],
     setAktifKare = _useState2[1];
+=======
+  var _useState = (0, _react.useState)(KareIdListesi),
+    _useState2 = _slicedToArray(_useState, 2),
+    kareler = _useState2[0],
+    setKareler = _useState2[1];
+  var _useState3 = (0, _react.useState)(null),
+    _useState4 = _slicedToArray(_useState3, 2),
+    aktifKare = _useState4[0],
+    setaktifKare = _useState4[1];
+  // State hookunu 2 defa kullanın: 'kareler' ve
+  // 'aktifKare' olmak üzere. Birisi kare idlerini _dizi_ olarak tutacak, diğeri ise aktif olan
+  // kareyi gözlemleyecek. Sayfa yüklendiğinde aktif kare olmayacak,
+  // yani  'aktifKare' null olmalı.
+
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   var ClassAdiAl = function ClassAdiAl(id) {
     // Bu bir click handler değildir, JSX içinde kullanılan bir yardımcıdır(helper).(aşağıya bakın)
     // Eğer argüman olarak verilen id aktif kare state'indeki id ile eşleşirse, class adı 'active' olan bir string döndürecek
     // diğer durumlar için boş döndürecek.
     // Etkisini görmek için kareye sağ tıklayın ve "öğeyi inceleyin".
+<<<<<<< HEAD
     return id == aktifKare ? "active" : "";
     return "";
+=======
+    return id == aktifKare ? "active" : " ";
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   };
   var AktifEt = function AktifEt(id) {
     // Bu bir _satır içinden çağırılmış_ click handler yardımcısıdır.
     // id bağımsız değişkenini, stateteki aktif id olacak şekilde ayarlayın
     // eğer zaten aktifse, o zaman önce state i resetlemeliyiz.
+<<<<<<< HEAD
     setAktifKare(id);
+=======
+    setaktifKare(id);
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-squares container"
@@ -26080,8 +26170,21 @@ var enIyilerListesi = [{
 }];
 exports.enIyilerListesi = enIyilerListesi;
 function Programcilar() {
+  var _useState = (0, _react.useState)(enIyilerListesi),
+    _useState2 = _slicedToArray(_useState, 2),
+    enIyiler = _useState2[0],
+    setenIyiler = _useState2[1];
+  var _useState3 = (0, _react.useState)(null),
+    _useState4 = _slicedToArray(_useState3, 2),
+    programciId = _useState4[0],
+    setProgramciId = _useState4[1];
+  var _useState5 = (0, _react.useState)(""),
+    _useState6 = _slicedToArray(_useState5, 2),
+    oneCikaninIsmi = _useState6[0],
+    setoneCikaninIsmi = _useState6[1];
   // İki state dilimine ihtiyacımız olduğundan, state hooku iki kez kullanmamız gerekecek..
 
+<<<<<<< HEAD
   var _useState = (0, _react.useState)(enIyilerListesi),
     _useState2 = _slicedToArray(_useState, 2),
     programcilar = _useState2[0],
@@ -26111,6 +26214,20 @@ function Programcilar() {
     fontSize: "1.5em",
     marginTop: "0.5em",
     color: programciId !== null ? "gold" : "royalblue" // 🤔 kutlarken renk gold'a dönecek
+=======
+  // const oneCikaninIsmi = () => {
+  //   // Bunu sona bırakın!
+  //   // Bu bir event handler değil, yardımcıdır. Kullanımını JSX'te gözlemleyin.
+  //   // Öne çıkan geliştiricinin _isim_ adını döndürmek için her iki state dilimini kullanacak.
+  //   // Closureların güzelliği, argümanlar yoluyla bilgi enjekte etmeye gerek kalmadan programın 
+  // // bu bölgesinden her iki state dilimini de "görebilmemiz"dir.
+  // };
+
+  var stil = {
+    fontSize: '1.5em',
+    marginTop: '0.5em',
+    color: 'royalblue' // 🤔 kutlarken renk gold'a dönecek
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   };
 
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -26122,14 +26239,18 @@ function Programcilar() {
   // Şöyle diyebiliriz: "aa bu çalışıyor!" Ama programcilar bir state diliminden gelmiyorsa,
   // asla yeni programci ekleyemeyiz, programcilari düzenleyemeyiz ya da silemeyiz. Düzeltin!
   " */
-  enIyilerListesi.map(function (dev) {
+  enIyiler.map(function (dev) {
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "programmer",
       key: dev.id
-    }, dev.isim, " ", /*#__PURE__*/_react.default.createElement("button", {
+    }, dev.isim, /*#__PURE__*/_react.default.createElement("button", {
       onClick: function onClick() {
         /* burada dev.id 'yi öne çıkan id'ye atayın */
         setProgramciId(dev.id);
+<<<<<<< HEAD
+=======
+        setoneCikaninIsmi(dev.isim);
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
       }
     }, "Kutla"));
   }), /*#__PURE__*/_react.default.createElement("button", {
@@ -26143,7 +26264,11 @@ function Programcilar() {
   // Üçlüler, bir şeyin "gerçekliğine" bağlı olarak "bir şeyi veya diğerini" ifade etmek için harikadır..
   // Sözde-kod: öne çıkan true ise metin 1'i oluşturun, aksi takdirde metin 2'yi oluşturun..
   // Sabit kodlanmış false'u doğru değişkenle değiştirin.
+<<<<<<< HEAD
   programciId !== null ? "\uD83C\uDF89 Hadi ".concat(oneCikaninIsmi(), "'\u0131 kutlayal\u0131m! \uD83E\uDD73") : "Harika bir programcı seçin"));
+=======
+  programciId != null ? "\uD83C\uDF89 Hadi ".concat(oneCikaninIsmi(), "'\u0131 kutlayal\u0131m! \uD83E\uDD73") : 'Harika bir programcı seçin'));
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
 }
 },{"react":"../node_modules/react/index.js"}],"index.js":[function(require,module,exports) {
 "use strict";
@@ -26183,7 +26308,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+<<<<<<< HEAD
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "59552" + '/');
+=======
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60101" + '/');
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

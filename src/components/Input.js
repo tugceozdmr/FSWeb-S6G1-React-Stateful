@@ -33,6 +33,7 @@ ADIM 6:
   <input /> öğesine şu şekilde fazladan bir prop eklememiz gerekiyor: value={inputDeğeri}
 */
 
+<<<<<<< HEAD
 import React, { useState } from "react"; /* ADIM 0 */
 
 export default function Input() {
@@ -55,11 +56,34 @@ export default function Input() {
     fontSize: "1.5em",
     marginBottom: "0.3em",
     color: inputDegeri.length >= 10 ? "crimson" : "royalblue" /* ADIM 2 */,
+=======
+import React, {useState} from 'react'; /* ADIM 0 */
+
+export default function Input() {
+  const [inputDegeri, setinputDegeri] = useState(" ")/* ADIM 1 */
+	
+  const inputuDeğiştir = evt => {
+    // When the input changes, its whole value can be found inside the event object.
+    // Log out the synthetic event object 'evt' and see for yourself.
+    const { value } = evt.target;
+	setinputDegeri(value);
+    /* ADIM 4 */
+  };
+  const reset = () => {
+    setinputDegeri("");/* ADIM 5 */
+  };
+
+  const stil = {
+    fontSize: '1.5em',
+    marginBottom: '0.3em',
+    color: inputDegeri.length>10?'crimson':"" /* ADIM 2 */
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   };
 
   return (
     <div className="widget-input container">
       <h2>Input</h2>
+<<<<<<< HEAD
       <div id="output" style={stil}>
         {inputDegeri.toUpperCase()}
       </div>
@@ -75,6 +99,14 @@ export default function Input() {
           {" "}
           Reset
         </button>
+=======
+      <div id='output' style={stil}>
+        {""} 
+        {inputDegeri.toUpperCase()/* ADIM 3 */}
+      <div></div>
+		<input id='input' type='text' onChange={inputuDeğiştir} /> {/*ADIM6*/}
+        <button id='resetInput' onClick={reset}>Reset</button>
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
       </div>
     </div>
   );

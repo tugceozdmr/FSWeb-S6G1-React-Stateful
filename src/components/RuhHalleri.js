@@ -27,18 +27,24 @@ ADIM 4, 5, 6:
   Click handler içinde `setRuhHali` ni kulanarak aşağıda tanımlanmış değişkenleri kullanarak ruhHali'ni güncelleyin
 */
 
+<<<<<<< HEAD
 import React,{useState} from 'react'; /* ADIM 0 */
+=======
+import React, {useState} from 'react'; /* ADIM 0 */
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
 
 const ilkRuhHali = 'Nasıl hissettiğimi bilmiyorum :-|';
 const mutluRuhHali = 'Oldukça mutlu :)';
 const uzgunRuhHali = 'Oldukça üzgün :(';
 
 export default function RuhHalleri() {
+  const [ruhHali, setRuhHali] = useState(ilkRuhHali);
   /* ADIM 1 */
   const[ruhHali,setRuhHali]=useState(ilkRuhHali,mutluRuhHali,uzgunRuhHali)
 	
 	
   const mutluEt = () => {
+<<<<<<< HEAD
     /* ADIM 4 */
     setRuhHali(mutluRuhHali)
   };
@@ -49,18 +55,35 @@ export default function RuhHalleri() {
   const reset = () => {
     /* ADIM 6 */
     setRuhHali(ilkRuhHali)
+=======
+   setRuhHali(mutluRuhHali); /* ADIM 4 */
+  };
+  const uZ = () => {
+    setRuhHali(uzgunRuhHali); /* ADIM 5 */
+  };
+  const reset = () => {
+    setRuhHali(ilkRuhHali);/* ADIM 6 */
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   };
 
   const stil = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
+<<<<<<< HEAD
     color: mutluRuhHali ? 'royalblue':crimson /* ADIM 2 */
+=======
+    color: ruhHali==mutluRuhHali?"royalblue":"crimson"/* ADIM 2 */
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   };
 
   return (
     <div className='widget-moods container'>
       <h2>RuhHalleri</h2>
+<<<<<<< HEAD
 	<div id='ruhHali' style={stil}>'Nasıl hissettiğimi bilmiyorum :-|'</div> {ruhHali}
+=======
+	<div id='ruhHali' style={stil}>'Nasıl hissettiğimi bilmiyorum :-|'</div> {ruhHali/* ADIM 3 */}
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
       <div>
         <button id='mutluEt' onClick={mutluEt}>Mutlu Et</button>
         <button id='uz' onClick={uZ}>Üz</button>

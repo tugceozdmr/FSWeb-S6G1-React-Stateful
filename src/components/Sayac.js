@@ -45,15 +45,21 @@ ADIM 6:
 	Bu click handler 'sayici' yı sıfırlamak için 'setSayici' yi kullanacak.
 */
 
+<<<<<<< HEAD
 import React, {useState} from 'react'; /* ADIM 0 buraya*/
+=======
+import React,{useState} from 'react'; /* ADIM 0 buraya*/
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
 
 export default function Sayac() {
+  const [sayici, setSayici] = useState(0)
   /* ADIM 1 buraya*/
 	
   const [sayici, setSayici] = useState(0);
 	
   const artirici = () => {
     /* ADIM 4 buraya */
+<<<<<<< HEAD
     setSayici(sayici + 1)
   };
   const azaltici = () => {
@@ -64,19 +70,39 @@ export default function Sayac() {
   const reset = () => {
     setSayici(0)
 
+=======
+    setSayici(sayici+1);
+  };
+  const azaltici = () => {
+    /* ADIM 5 */
+    setSayici(sayici-1);
+  };
+  const reset = () => {
+    setSayici(0);
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   };
 
   const stil = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
+<<<<<<< HEAD
     color: sayici % 2 == 0 ? 'royalblue' : "crimson", /* ADIM 2 */
+=======
+    color: sayici%2==0 ? 'royalblue':"crimson" /* ADIM 2 */ 
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
   };
 
   return (
     <div className='widget-counter container'>
       <h2>Sayaç</h2>
       <div id='sayici' style={stil}>
+<<<<<<< HEAD
         Sayı {sayici} {sayici % 2 == 0 ? " çift" : " tek" }
+=======
+        Sayı {sayici} 
+        {sayici%2==0 ?"cifttir":"tektir"}  
+  ;
+>>>>>>> 85b0856b13b3bedd4df2ac7db4e8256a78f48ed0
       </div>
       <div>
         <button id='artirici' onClick={artirici}>Artırıcı</button>
